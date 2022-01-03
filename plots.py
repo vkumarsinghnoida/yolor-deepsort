@@ -45,15 +45,15 @@ def plot_one_box(x, img, color=None, label=None, line_thickness=None, counter=0)
     x1, y1 = c1
     x2, y2 = c2    
     xc, yc = (int((x2+x1)/ 2), int((y2+y2)/2))
-
+    print(counter)
     
     if yc > 178 and yc < 350:
     	if yc == (823 - (0.86*xc)):
-    		counter += 1
-                print(counter)
+            counter += 1
+
 
     		
-    
+
     				
     return counter
     		
