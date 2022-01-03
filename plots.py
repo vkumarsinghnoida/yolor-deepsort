@@ -50,7 +50,7 @@ def plot_one_box(x, img, color=None, label=None, line_thickness=None, counter=0)
     if yc > 178 and yc < 350:
     	if yc == (823 - (0.86*xc)):
     		counter += 1
-            print(counter)
+                print(counter)
 
     		
     
