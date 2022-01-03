@@ -32,8 +32,8 @@ def plot_one_box(x, img, color=None, label=None, line_thickness=None, counter=0)
     
     c1, c2 = (int(x[0]), int(x[1])), (int(x[2]), int(x[3]))    
     cv2.rectangle(img, c1, c2, color, thickness=tl, lineType=cv2.LINE_AA)
-    cv2.circle(img, (550, 350), 8, (255, 255,0), thickness=4)
-    cv2.circle(img, (750, 178), 4, (255, 255,0), thickness=4)
+    cv2.circle(img, (550, 350), 2, (255, 255,0), thickness=4)
+    cv2.circle(img, (750, 178), 2, (255, 255,0), thickness=4)
     if label:
         tf = max(tl - 1, 1)  # font thickness
         t_size = cv2.getTextSize(label, 0, fontScale=tl / 3, thickness=tf)[0]
@@ -45,31 +45,16 @@ def plot_one_box(x, img, color=None, label=None, line_thickness=None, counter=0)
     x1, y1 = c1
     x2, y2 = c2    
     xc, yc = (int((x2+x1)/ 2), int((y2+y2)/2))
-    xc1 = xc + 2
-    xc2 = xc + 4
-    xc3 = xc + 6
-    yc1 = yc + 2
-    yc2 = yc + 4
-    yc3 = yc + 6
+
     
     if yc > 178 and yc < 350:
-    	if yc == (473 - (0.86*xc)):
+    	if yc == (823 - (0.86*xc)):
     		counter += 1
     		
-    if yc > 178 and yc < 350:
-    	if yc == (473 - (0.86*xc1)):
-    		counter += 1
-    		
-    if yc > 178 and yc < 350:
-    	if yc == (473 - (0.86*xc2)):
-    		counter += 1
-    		
-    if yc > 178 and yc < 350:
-    	if yc == (473 - (0.86*xc3)):
-    		counter += 1
+    
     				
     return counter
     		
-      
+    
     	
 
